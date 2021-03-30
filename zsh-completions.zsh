@@ -69,3 +69,7 @@ zstyle -e ':completion:*:*:ssh:*:my-accounts' users-hosts \
 '[[ -f ${HOME}/.ssh/config && ${key} == hosts ]] && key=my_hosts reply=()'
 
 zstyle ':completion:*:*:cast:*' file-patterns '*.mkv:all-files'
+
+# testing
+compdef _plug plug
+_plug() {_path_files -W ${PLUGROOT} }
